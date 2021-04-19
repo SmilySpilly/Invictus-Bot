@@ -15,12 +15,8 @@ db.then(() => console.log("Connected to MongoDB.")).catch((err) =>
   console.log(err)
 );
 
-
+// On Message
 bot.on("message", async (message) => {
-
-    // Embed Messages 
-    
-
     if(message.content[0] == config.prefix ){
         const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
         const commandName = args.shift().toLowerCase();
@@ -110,18 +106,7 @@ bot.on("message", async (message) => {
             require("./embed/matching.js").clanmatch(bot, message, args)
             break;       
         }
-
-
-       
     }
-})
-
-bot.on("messageReactionAdd", async (reaction, user) => {
-
-})
-
-bot.on("messageReactionRemove", async (reaction, user) => {
-
 })
 
 bot.on("ready", async () => console.log(`${bot.user.tag} is ready!`))
