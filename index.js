@@ -126,4 +126,4 @@ bot.on("messageReactionRemove", async (reaction, user) => {
 
 bot.on("ready", async () => console.log(`${bot.user.tag} is ready!`))
 
-bot.login("Nzg4MDUzNjc5MjE5MDE1NzAw.X9d6Lg.vGxHCAM9S34vyEUyYE_FFf7xwBM")
+bot.login("Your Bot Token")
