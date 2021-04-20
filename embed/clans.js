@@ -319,7 +319,7 @@ const officerDBFunction = (user, bot, message, args,) => {
                     if(res.length > 0){
                         if(res[0].members.includes(p1)){
                             Clans.updateOne({leader:user}, {$pull: {members: p1}, $push:{officers: p1}}, (req,updateRes) => {})
-                            message.member.roles.add(config.clanOfficerRole)
+                            message.guild.members.cache.get(p1).roles.add("833391813708087296")
 
                             message.channel.send({embed: {
                                 color: "11C26D",
